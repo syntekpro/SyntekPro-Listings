@@ -1,0 +1,43 @@
+name: Release Plugin
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Read version from plugin header
+        id: meta
+        run: |
+          VERSION=$(grep -E "^ \* Version:" syntekpro-listings.php | sed -E 's/^ \* Version:[[:space:]]*//')
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+
+      - name: Build plugin zip
+        run: |
+          mkdir -p dist
+          zip -r "dist/SyntekPro-Listings-v${{ steps.meta.outputs.version }}.zip" . \
+            -x "*.git*" \
+            -x "dist/*" \
+            -x "releases/*"
+
+      - name: Generate release notes
+        id: notes
+        run: |
+          echo "# SyntekPro Listings v${{ steps.meta.outputs.version }}" > release-notes.md
+          echo "" >> release-notes.md
+          echo "See CHANGELOG.md for full details." >> release-notes.md
+
+      - name: Create GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/SyntekPro-Listings-v${{ steps.meta.outputs.version }}.zip
+          body_path: release-notes.md

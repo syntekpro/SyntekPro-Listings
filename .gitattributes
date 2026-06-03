@@ -1,0 +1,19 @@
+* text=auto eol=lf
+
+# Keep scripts with expected line endings
+*.ps1 text eol=crlf
+*.bat text eol=crlf
+
+# Binary assets
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.zip binary
+
+# Exclude internal docs and tooling from source export archives
+.github/ export-ignore
+.vscode/ export-ignore
+*.md export-ignore

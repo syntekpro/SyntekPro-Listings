@@ -1,0 +1,41 @@
+/*
+ * SyntekPro Listings — Print stylesheet
+ * Used for brochure, window card and digital display templates.
+ */
+
+@page { margin: 15mm; }
+* { box-sizing: border-box; }
+body { font-family: Georgia, serif; color: #111; background: #fff; margin: 0; padding: 0; }
+
+/* ─── Brochure ─────────────────────────────────────────────────────────── */
+.sp-brochure-page { max-width: 800px; margin: 0 auto; }
+.sp-brochure-header { border-bottom: 3px solid #1a73e8; padding-bottom: 12px; margin-bottom: 20px; }
+.sp-brochure-header h1 { font-size: 1.8rem; margin: 0 0 4px; }
+.sp-brochure-address { color: #555; margin: 0 0 6px; }
+.sp-brochure-price { font-size: 1.6rem; font-weight: 700; color: #1a73e8; margin: 0; }
+.sp-brochure-main-image { margin: 0 0 18px; }
+.sp-brochure-main-image img { width: 100%; max-height: 340px; object-fit: cover; display: block; }
+.sp-brochure-specs { display: flex; gap: 16px; margin: 12px 0; font-weight: 600; }
+.sp-brochure-description { line-height: 1.7; margin-bottom: 20px; }
+.sp-brochure-epc { margin: 20px 0; }
+.sp-brochure-footer { border-top: 1px solid #ccc; padding-top: 10px; margin-top: 24px; font-size: .85rem; color: #777; }
+
+/* ─── Window card ──────────────────────────────────────────────────────── */
+.sp-window-card-body { background: #fff; }
+.sp-window-card { width: 148mm; min-height: 105mm; border: 1px solid #ccc; border-radius: 6px; overflow: hidden; display: flex; flex-direction: column; margin: 0 auto; }
+.sp-wc-image { width: 100%; height: 80mm; object-fit: cover; display: block; }
+.sp-wc-info { padding: 10px 12px; flex: 1; }
+.sp-wc-price { font-size: 1.3rem; font-weight: 700; color: #1a73e8; }
+.sp-wc-title { font-size: 1rem; margin: 2px 0; }
+.sp-wc-address { font-size: .85rem; color: #555; }
+.sp-wc-specs { font-size: .85rem; display: flex; gap: 10px; margin: 4px 0; }
+.sp-wc-qr { margin-top: 6px; }
+.sp-wc-agency { font-size: .8rem; color: #888; margin-top: 4px; }
+
+/* ─── Print media overrides ────────────────────────────────────────────── */
+@media print {
+	.sp-btn-submit,
+	.sp-btn-calc,
+	nav, button { display: none !important; }
+	a { color: inherit; text-decoration: none; }
+}

@@ -1,0 +1,43 @@
+/*
+ * SyntekPro Listings — Admin stylesheet
+ */
+
+/* ─── Dashboard stats ────────────────────────────────────────────────────── */
+.sp-dashboard-stats { display: flex; gap: 16px; flex-wrap: wrap; margin: 24px 0; }
+.sp-stat-card { flex: 1; min-width: 180px; background: #fff; border: 1px solid #dee2e6; border-radius: 6px; padding: 20px; text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,.06); }
+.sp-stat-number { display: block; font-size: 2.4rem; font-weight: 700; color: #1a73e8; }
+.sp-stat-label  { display: block; font-size: .85rem; color: #6c757d; margin: 4px 0 8px; }
+.sp-stat-card a { font-size: .85rem; }
+.sp-stat-highlight .sp-stat-number { color: #dc3545; }
+.sp-dashboard-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+
+/* ─── CRM / import / export tabs ────────────────────────────────────────── */
+.sp-crm-tabs,
+.sp-import-tabs { display: flex; gap: 4px; margin-bottom: 16px; border-bottom: 2px solid #dee2e6; }
+.sp-tab-btn { background: none; border: none; border-bottom: 2px solid transparent; padding: 8px 16px; cursor: pointer; font-size: .9rem; margin-bottom: -2px; }
+.sp-tab-btn.active { border-bottom-color: #1a73e8; color: #1a73e8; font-weight: 600; }
+.sp-tab-pane { padding: 16px 0; }
+.sp-crm-toolbar { display: flex; gap: 10px; align-items: center; margin-bottom: 14px; }
+.sp-crm-list table { width: 100%; }
+.sp-crm-list tr:hover { background: #f8f9fa; }
+
+/* ─── Modal ──────────────────────────────────────────────────────────────── */
+.sp-modal { position: fixed; inset: 0; background: rgba(0,0,0,.55); z-index: 100000; display: flex; align-items: center; justify-content: center; }
+.sp-modal-inner { background: #fff; border-radius: 6px; padding: 28px; min-width: 400px; max-width: 600px; max-height: 90vh; overflow-y: auto; box-shadow: 0 8px 32px rgba(0,0,0,.18); }
+.sp-modal-inner h2 { margin: 0 0 16px; font-size: 1.2rem; }
+.sp-modal-inner p { margin-bottom: 12px; }
+.sp-modal-inner label { display: flex; flex-direction: column; gap: 4px; font-size: .9rem; }
+
+/* ─── Import / export ────────────────────────────────────────────────────── */
+.sp-import-section { padding: 12px 0; }
+#sp-import-preview,
+#sp-import-result { background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 6px; padding: 14px; margin-top: 16px; font-size: .85rem; max-height: 300px; overflow-y: auto; }
+.sp-export-wrap h2 { margin-top: 24px; }
+#sp-export-output textarea { font-size: .8rem; font-family: monospace; }
+
+/* ─── Settings ───────────────────────────────────────────────────────────── */
+.sp-settings-wrap .nav-tab-wrapper { margin-bottom: 20px; }
+
+/* ─── FullCalendar overrides ─────────────────────────────────────────────── */
+#sp-fullcalendar { max-height: 600px; }
+.fc-toolbar-title { font-size: 1.1rem !important; }

@@ -2,6 +2,10 @@
 
 All notable changes to this project are documented in this file.
 
+## [1.0.3] - 2026-06-04
+- Fixed admin memory exhaustion fatal caused by recursive plugin bootstrap call in `SyntekPro_Admin` constructor.
+- Refactored core/admin settings wiring to inject `SyntekPro_Settings` dependency without calling `SyntekPro()` during singleton construction.
+
 ## [1.0.2] - 2026-06-04
 - Fixed fatal error by correcting i18n init callback in core (`load_plugin_textdomain` to `load_textdomain`).
 - Removed PHP 8-only union return type from template loader to maintain PHP 7.4 compatibility.

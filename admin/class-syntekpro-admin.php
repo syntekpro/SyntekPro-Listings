@@ -13,10 +13,14 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Class SyntekPro_Admin
  */
 class SyntekPro_Admin {
+	/** @var SyntekPro_Settings */
+	private $settings;
 
-	public function __construct() {
+	public function __construct( $settings ) {
+		$this->settings = $settings;
+
 		add_action( 'admin_menu', array( $this, 'register_menus' ) );
-		add_action( 'admin_init', array( SyntekPro()->settings, 'register_settings' ) );
+		add_action( 'admin_init', array( $this->settings, 'register_settings' ) );
 		add_filter( 'set-screen-option', array( $this, 'save_screen_options' ), 10, 3 );
 	}
 
@@ -65,7 +69,7 @@ class SyntekPro_Admin {
 	}
 
 	public function page_settings() {
-		SyntekPro()->settings->render_settings_page();
+		$this->settings->render_settings_page();
 	}
 
 	// ─── Helper ──────────────────────────────────────────────────────────────

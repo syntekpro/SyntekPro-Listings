@@ -4,7 +4,7 @@ Tags: real estate, property listings, estate agent, letting agent, mortgage calc
 Requires at least: 5.8
 Tested up to: 6.6
 Requires PHP: 7.4
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -126,6 +126,10 @@ Imported listings are saved as `syntekpro_listing` custom post type entries. Eac
 
 == Changelog ==
 
+= 1.0.3 =
+* Fixed admin memory exhaustion fatal by removing recursive `SyntekPro()` call during admin bootstrap.
+* Refactored settings dependency injection between core and admin classes.
+
 = 1.0.2 =
 * Fixed fatal error on some environments by correcting i18n init callback (`load_plugin_textdomain` -> `load_textdomain`).
 * Restored PHP 7.4 compatibility by removing PHP 8 union return type in template loader.
@@ -137,6 +141,9 @@ Imported listings are saved as `syntekpro_listing` custom post type entries. Eac
 * Initial release.
 
 == Upgrade Notice ==
+
+= 1.0.3 =
+Critical fix for admin memory fatal.
 
 = 1.0.2 =
 Fixes fatal error and PHP 7.4 compatibility issue.

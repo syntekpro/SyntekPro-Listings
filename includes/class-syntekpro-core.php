@@ -41,6 +41,7 @@ final class SyntekPro_Core {
 	public $portal_builder;
 	public $assets;
 	public $i18n;
+	public $settings;
 	public $admin;
 
 	private function __construct() {
@@ -140,7 +141,8 @@ final class SyntekPro_Core {
 		$this->assets        = new SyntekPro_Assets();
 
 		if ( is_admin() ) {
-			$this->admin = new SyntekPro_Admin();
+			$this->settings = new SyntekPro_Settings();
+			$this->admin    = new SyntekPro_Admin( $this->settings );
 		}
 
 		// Page builder integrations.

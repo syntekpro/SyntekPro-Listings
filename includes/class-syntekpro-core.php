@@ -156,7 +156,7 @@ final class SyntekPro_Core {
 	 * Load plugin text domain.
 	 */
 	private function set_locale() {
-		add_action( 'init', array( $this->i18n, 'load_plugin_textdomain' ) );
+		add_action( 'init', array( $this->i18n, 'load_textdomain' ) );
 	}
 
 	/**

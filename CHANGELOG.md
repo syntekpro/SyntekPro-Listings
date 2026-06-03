@@ -2,6 +2,10 @@
 
 All notable changes to this project are documented in this file.
 
+## [1.0.2] - 2026-06-04
+- Fixed fatal error by correcting i18n init callback in core (`load_plugin_textdomain` to `load_textdomain`).
+- Removed PHP 8-only union return type from template loader to maintain PHP 7.4 compatibility.
+
 ## [1.0.1] - 2026-06-04
 - Fixed plugin activation bootstrap by loading `SyntekPro_Activator` before registering activation/deactivation hooks.
 - Confirmed plugin activation path works in WordPress plugin API.

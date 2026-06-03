@@ -62,7 +62,7 @@ class SyntekPro_Templates {
 	 * @param string $template Template slug (without .php).
 	 * @return string|false  Absolute path or false.
 	 */
-	public function locate_template( string $template ): string|false {
+	public function locate_template( string $template ) {
 		$file = ltrim( $template, '/' ) . '.php';
 
 		$locations = array(

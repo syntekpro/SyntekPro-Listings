@@ -2,6 +2,10 @@
 
 All notable changes to this project are documented in this file.
 
+## [1.0.1] - 2026-06-04
+- Fixed plugin activation bootstrap by loading `SyntekPro_Activator` before registering activation/deactivation hooks.
+- Confirmed plugin activation path works in WordPress plugin API.
+
 ## [1.0.0] - 2026-06-04
 - Initial public release of SyntekPro Listings.
 - Added listing management with multiple listing types:

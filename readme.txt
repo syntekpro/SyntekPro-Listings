@@ -4,7 +4,7 @@ Tags: real estate, property listings, estate agent, letting agent, mortgage calc
 Requires at least: 5.8
 Tested up to: 6.6
 Requires PHP: 7.4
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -126,6 +126,12 @@ Imported listings are saved as `syntekpro_listing` custom post type entries. Eac
 
 == Changelog ==
 
+= 1.0.4 =
+* Added branded dashboard header with centered plugin logo.
+* Added red version badge on dashboard header.
+* Set dashboard header background to light green.
+* Added custom plugin icon in WordPress admin menu.
+
 = 1.0.3 =
 * Fixed admin memory exhaustion fatal by removing recursive `SyntekPro()` call during admin bootstrap.
 * Refactored settings dependency injection between core and admin classes.
@@ -141,6 +147,9 @@ Imported listings are saved as `syntekpro_listing` custom post type entries. Eac
 * Initial release.
 
 == Upgrade Notice ==
+
+= 1.0.4 =
+Adds branded dashboard UI and custom admin menu icon.
 
 = 1.0.3 =
 Critical fix for admin memory fatal.

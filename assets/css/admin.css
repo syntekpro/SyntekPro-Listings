@@ -2,6 +2,69 @@
  * SyntekPro Listings — Admin stylesheet
  */
 
+/* ─── Branded dashboard header ─────────────────────────────────────────── */
+.sp-dashboard-header {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 120px;
+	padding: 18px 20px;
+	margin: 14px 0 18px;
+	background: #dff5d8;
+	border: 1px solid #b7dfab;
+	border-radius: 10px;
+}
+
+.sp-dashboard-logo-wrap {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+
+.sp-dashboard-logo {
+	max-height: 78px;
+	width: auto;
+	max-width: 420px;
+	object-fit: contain;
+}
+
+.sp-dashboard-version {
+	position: absolute;
+	right: 16px;
+	top: 16px;
+	padding: 8px 14px;
+	border-radius: 999px;
+	background: #c62828;
+	color: #fff;
+	font-weight: 700;
+	font-size: 12px;
+	letter-spacing: .3px;
+	line-height: 1;
+}
+
+.sp-dashboard-title {
+	margin-top: 0 !important;
+}
+
+@media (max-width: 782px) {
+	.sp-dashboard-header {
+		padding-top: 44px;
+	}
+
+	.sp-dashboard-version {
+		right: 12px;
+		top: 10px;
+		font-size: 11px;
+	}
+
+	.sp-dashboard-logo {
+		max-width: 260px;
+		max-height: 62px;
+	}
+}
+
 /* ─── Dashboard stats ────────────────────────────────────────────────────── */
 .sp-dashboard-stats { display: flex; gap: 16px; flex-wrap: wrap; margin: 24px 0; }
 .sp-stat-card { flex: 1; min-width: 180px; background: #fff; border: 1px solid #dee2e6; border-radius: 6px; padding: 20px; text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,.06); }

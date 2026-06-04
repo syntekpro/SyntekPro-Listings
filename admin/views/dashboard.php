@@ -7,6 +7,8 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
+$logo_url = SYNTEKPRO_ASSETS_URL . 'img/SyntekPro%20Listings%20Logo.png';
+
 $total_listings = wp_count_posts( 'syntekpro_listing' )->publish ?? 0;
 $total_agents   = wp_count_posts( 'syntekpro_agent' )->publish ?? 0;
 
@@ -18,7 +20,14 @@ $upcoming_viewings = (int) $wpdb->get_var( $wpdb->prepare( // phpcs:ignore
 ) );
 ?>
 <div class="wrap sp-admin-dashboard">
-	<h1><?php esc_html_e( 'SyntekPro Listings — Dashboard', 'syntekpro-listings' ); ?></h1>
+	<div class="sp-dashboard-header">
+		<span class="sp-dashboard-version">v<?php echo esc_html( SYNTEKPRO_VERSION ); ?></span>
+		<div class="sp-dashboard-logo-wrap">
+			<img src="<?php echo esc_url( $logo_url ); ?>" alt="<?php esc_attr_e( 'SyntekPro Listings Logo', 'syntekpro-listings' ); ?>" class="sp-dashboard-logo" />
+		</div>
+	</div>
+
+	<h1 class="sp-dashboard-title"><?php esc_html_e( 'SyntekPro Listings Dashboard', 'syntekpro-listings' ); ?></h1>
 
 	<div class="sp-dashboard-stats">
 		<div class="sp-stat-card">

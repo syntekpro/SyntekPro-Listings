@@ -26,7 +26,7 @@ class SyntekPro_Admin {
 
 	public function register_menus() {
 		$brand = sanitize_text_field( get_option( 'syntekpro_white_label_name', 'SyntekPro Listings' ) );
-		$icon  = 'dashicons-building';
+		$icon  = SYNTEKPRO_ASSETS_URL . 'img/SyntekPro%20Listings%20White%20Icon.png';
 
 		add_menu_page(
 			$brand,

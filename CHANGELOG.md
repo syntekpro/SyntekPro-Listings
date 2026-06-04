@@ -2,6 +2,11 @@
 
 All notable changes to this project are documented in this file.
 
+## [1.0.4] - 2026-06-04
+- Added branded admin dashboard header with centered plugin logo.
+- Added red version badge and light green header background.
+- Added custom plugin icon for WordPress admin menu.
+
 ## [1.0.3] - 2026-06-04
 - Fixed admin memory exhaustion fatal caused by recursive plugin bootstrap call in `SyntekPro_Admin` constructor.
 - Refactored core/admin settings wiring to inject `SyntekPro_Settings` dependency without calling `SyntekPro()` during singleton construction.
